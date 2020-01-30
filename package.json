@@ -1,10 +1,10 @@
 {
   "name": "react-logic-match",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Wrappers components for logical displaying",
-  "author": "Purexo",
+  "author": "tpoisseau",
   "license": "MIT",
-  "repository": "Purexo/react-logic-match",
+  "repository": "tpoisseau/react-logic-match",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

@@ -15,17 +15,58 @@ npm install --save react-logic-match
 ```tsx
 import * as React from 'react'
 
-import MyComponent from 'react-logic-match'
+import {Match, Switch, Case, Default} from 'react-logic-match'
 
 class Example extends React.Component {
   render () {
     return (
-      <MyComponent />
+        <>
+            <Match condition={'foo' === 'bar'}>
+              <p>'foo' === 'bar'</p>
+            </Match>
+            <Match condition={'foo' === 'foo'}>
+              <p>'foo' === 'foo'</p>
+            </Match>
+            <Match condition={'bar' === 'foo'}>
+              <p>'bar' === 'foo'</p>
+            </Match>
+            <Match condition={'bar' === 'bar'}>
+              <p>'bar' === 'bar'</p>
+            </Match>
+
+            <Switch value={1}>
+              <Case value={0}>
+                <p>Case 0</p>
+              </Case>
+              <Default>
+                <p>Default</p>
+              </Default>
+            </Switch>
+
+            <Switch value={1}>
+              <Case value={0}>
+                <p>Case 0</p>
+              </Case>
+              <Case value={1}>
+                <p>Case 1</p>
+              </Case>
+            </Switch>
+        </>
     )
   }
 }
 ```
 
+## API
+- `<Match condition>` render children if condition props is truthy
+- `<Switch value>` rely on `<Case value>` and `<Default>`, ignore other children. Display first `<Case>` with value strictly equal from switch else `<Default>` or null if not given (with a `console.warn`)
+- `<Case value>` display his childen
+- `<Default>` display his children
+
+See `<Switch value>-<Case value>-<Default>` as a simple js `switch-case-default` statement. without the cascasing and break behavior
+
+For more info you can check the source code. It's strictly typed and not so much complicated
+
 ## License
 
-MIT © [Purexo](https://github.com/Purexo)
+MIT © [tpoisseau](https://github.com/tpoisseau)
