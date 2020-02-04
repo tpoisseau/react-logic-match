@@ -27,7 +27,7 @@ class Example extends React.Component {
             <Match condition={'foo' === 'foo'}>
               <p>'foo' === 'foo'</p>
             </Match>
-            <Match condition={'bar' === 'foo'}>
+            <Match condition={'bar' === 'foo'} fallback={<p>Fallback 'bar' === 'foo'</p>>
               <p>'bar' === 'foo'</p>
             </Match>
             <Match condition={'bar' === 'bar'}>
@@ -58,7 +58,7 @@ class Example extends React.Component {
 ```
 
 ## API
-- `<Match condition>` render children if condition props is truthy
+- `<Match condition fallback>` render children if condition props is truthy else fallback (null by default and optional)
 - `<Switch value>` rely on `<Case value>` and `<Default>`, ignore other children. Display first `<Case>` with value strictly equal from switch else `<Default>` or null if not given (with a `console.warn`)
 - `<Case value>` display his childen
 - `<Default>` display his children

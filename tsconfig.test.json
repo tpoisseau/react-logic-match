@@ -1,6 +1,13 @@
 {
   "extends": "./tsconfig.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"],
   "compilerOptions": {
-    "module": "commonjs"
+    "module": "commonjs",
+    "typeRoots": [
+      "@types/react",
+      "@types/react-dom",
+      "@types/jest"
+    ]
   }
 }

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+/// <reference types="react" />
 export interface IDefaultProps {
-    children: ReactNode | ReactNode[];
+    children: JSX.Element | JSX.Element[];
 }

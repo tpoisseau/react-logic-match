@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import {Match, Case, Default, Switch} from 'react-logic-match';
+import {Match, Case, Default, Switch} from 'dist';
 
 export default class App extends Component {
   render () {
@@ -12,7 +12,7 @@ export default class App extends Component {
         <Match condition={'foo' === 'foo'}>
           <p>'foo' === 'foo'</p>
         </Match>
-        <Match condition={'bar' === 'foo'}>
+        <Match condition={'bar' === 'foo'} fallback={<p>Fallback 'bar' === 'foo'</p>}>
           <p>'bar' === 'foo'</p>
         </Match>
         <Match condition={'bar' === 'bar'}>

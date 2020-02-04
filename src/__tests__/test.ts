@@ -1,7 +1,7 @@
-import Match from './Match';
-import Case from "./Case";
-import Default from "./Default";
-import Switch from "./Switch";
+import Match from '../Match';
+import Case from "../Case";
+import Default from "../Default";
+import Switch from "../Switch";
 
 describe('all import working', () => {
   it('Match', () => {

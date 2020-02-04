@@ -1,7 +1,5 @@
-import {ReactNode} from "react";
-
 export interface IMatchProps {
   condition: boolean;
-  fallback: ReactNode | ReactNode[];
-  children: ReactNode | ReactNode[];
+  fallback?: JSX.Element | null | undefined;
+  children: JSX.Element | JSX.Element[];
 }
