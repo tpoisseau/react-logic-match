@@ -1,4 +1,4 @@
 /// <reference types="react" />
 export interface IDefaultProps {
-    children: JSX.Element | JSX.Element[];
+    children: JSX.Element;
 }

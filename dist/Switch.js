@@ -35,7 +35,7 @@ function Switch(props) {
     var e_1, _a;
     var value = props.value, children = props.children;
     var childs = react_1.default.Children.toArray(children);
-    var defaultElement;
+    var defaultElement = undefined;
     var caseElementIndex = -1;
     try {
         for (var _b = __values(childs.entries()), _c = _b.next(); !_c.done; _c = _b.next()) {

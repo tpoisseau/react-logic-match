@@ -5,11 +5,11 @@ import {ISwitchProps} from "./ISwitch";
 
 const SUPPORTED_TYPES = [Case, Default];
 
-export default function Switch<T>(props: ISwitchProps<T>) {
+export default function Switch<T>(props: ISwitchProps<T>): JSX.Element | null {
   const {value, children} = props;
 
   const childs = React.Children.toArray(children);
-  let defaultElement;
+  let defaultElement: React.ReactElement<Default> | void = undefined;
   let caseElementIndex = -1;
   for (const [key, element] of childs.entries()) {
     // @ts-ignore
