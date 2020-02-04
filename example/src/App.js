@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import * as React from 'react'
 
-import {Match, Case, Default, Switch} from 'dist';
+import {Match, Case, Default, Switch} from 'react-logic-match';
 
-export default class App extends Component {
+export default class App extends React.Component {
   render () {
     return (
       <div>

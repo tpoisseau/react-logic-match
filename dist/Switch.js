@@ -1,4 +1,3 @@
-"use strict";
 var __values = (this && this.__values) || function(o) {
     var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
     if (m) return m.call(o);
@@ -26,15 +25,14 @@ var __read = (this && this.__read) || function (o, n) {
     }
     return ar;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
-var Case_1 = require("./Case");
-var Default_1 = require("./Default");
-var SUPPORTED_TYPES = [Case_1.default, Default_1.default];
-function Switch(props) {
+import React from "react";
+import Case from "./Case";
+import Default from "./Default";
+var SUPPORTED_TYPES = [Case, Default];
+export default function Switch(props) {
     var e_1, _a;
     var value = props.value, children = props.children;
-    var childs = react_1.default.Children.toArray(children);
+    var childs = React.Children.toArray(children);
     var defaultElement = undefined;
     var caseElementIndex = -1;
     try {
@@ -47,7 +45,7 @@ function Switch(props) {
             if (element.props.value === value)
                 caseElementIndex = key;
             // @ts-ignore
-            if (element.type === Default_1.default)
+            if (element.type === Default)
                 defaultElement = element;
             if (defaultElement && caseElementIndex >= 0)
                 break;
@@ -67,5 +65,4 @@ function Switch(props) {
     console.warn("Switch: no Case found and Default not provided");
     return null;
 }
-exports.default = Switch;
 //# sourceMappingURL=Switch.js.map

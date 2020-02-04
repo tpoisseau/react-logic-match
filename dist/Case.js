@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -12,8 +11,7 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = require("react");
+import React from "react";
 var Case = /** @class */ (function (_super) {
     __extends(Case, _super);
     function Case() {
@@ -23,6 +21,6 @@ var Case = /** @class */ (function (_super) {
         return this.props.children;
     };
     return Case;
-}(react_1.default.Component));
-exports.default = Case;
+}(React.Component));
+export default Case;
 //# sourceMappingURL=Case.js.map
