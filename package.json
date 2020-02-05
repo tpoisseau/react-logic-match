@@ -1,11 +1,10 @@
 {
   "name": "react-logic-match",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Wrappers components for logical displaying",
   "author": "tpoisseau",
   "license": "MIT",
   "repository": "tpoisseau/react-logic-match",
-  "main": "./dist/index.js",
   "module": "dist/index.js",
   "jsnext:main": "dist/index.js",
   "engines": {
