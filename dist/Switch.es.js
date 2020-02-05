@@ -1,17 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
-
-function Match(_a) {
-    var _b = _a.condition, condition = _b === void 0 ? false : _b, _c = _a.fallback, fallback = _c === void 0 ? null : _c, children = _a.children;
-    if (condition)
-        return children;
-    return fallback;
-}
+import React from 'react';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -130,8 +117,5 @@ function Switch(props) {
     return null;
 }
 
-exports.Case = Case;
-exports.Default = Default;
-exports.Match = Match;
-exports.Switch = Switch;
-//# sourceMappingURL=index.js.map
+export default Switch;
+//# sourceMappingURL=Switch.es.js.map

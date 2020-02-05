@@ -21,6 +21,6 @@
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true
   },
-  "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js", "src/__tests__/**/*"],
-  "include": ["src/**/*"]
+  "exclude": ["node_modules", "dist", "example", "rollup.config.js", "src/__tests__/**/*"],
+  "include": ["src"]
 }

@@ -1,10 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
+import React from 'react';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -35,16 +29,16 @@ function __extends(d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
-var Default = /** @class */ (function (_super) {
-    __extends(Default, _super);
-    function Default() {
+var Case = /** @class */ (function (_super) {
+    __extends(Case, _super);
+    function Case() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Default.prototype.render = function () {
+    Case.prototype.render = function () {
         return this.props.children;
     };
-    return Default;
+    return Case;
 }(React.Component));
 
-exports.default = Default;
-//# sourceMappingURL=Default.js.map
+export default Case;
+//# sourceMappingURL=Case.es.js.map

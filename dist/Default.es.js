@@ -1,10 +1,4 @@
-'use strict';
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
-
-var React = _interopDefault(require('react'));
+import React from 'react';
 
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -46,5 +40,5 @@ var Default = /** @class */ (function (_super) {
     return Default;
 }(React.Component));
 
-exports.default = Default;
-//# sourceMappingURL=Default.js.map
+export default Default;
+//# sourceMappingURL=Default.es.js.map
