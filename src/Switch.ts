@@ -25,7 +25,9 @@ export default function Switch<T>(props: ISwitchProps<T>): JSX.Element | null {
   if (caseElementIndex >= 0) return children[caseElementIndex];
   if (defaultElement) return defaultElement;
 
-  console.warn(`Switch: no Case found and Default not provided`);
+  if (props.debug) {
+    console.warn(`Switch: no Case found and Default not provided`, props, childs);
+  }
 
   return null;
 }

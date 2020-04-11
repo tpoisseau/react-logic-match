@@ -19,6 +19,8 @@ import {Match, Switch, Case, Default} from 'react-logic-match'
 
 class Example extends React.Component {
   render () {
+    const error = new Error('msg in jsx');
+
     return (
         <>
             <Match condition={'foo' === 'bar'}>
@@ -33,6 +35,9 @@ class Example extends React.Component {
             <Match condition={'bar' === 'bar'}>
               <p>'bar' === 'bar'</p>
             </Match>
+            <Match condition={error}>{() => {
+              <p>{error.message}</p>
+            }</Match>
 
             <Switch value={1}>
               <Case value={0}>
@@ -66,6 +71,8 @@ class Example extends React.Component {
 See `<Switch value>-<Case value>-<Default>` as a simple js `switch-case-default` statement. without the cascasing and break behavior
 
 For more info you can check the source code. It's strictly typed and not so much complicated
+
+Since v1.0.7, children and fallbacks props can be render props (a function who return JSX)
 
 ## License
 

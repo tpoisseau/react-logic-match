@@ -2,8 +2,13 @@ import React from 'react';
 
 function Match(_a) {
     var _b = _a.condition, condition = _b === void 0 ? false : _b, _c = _a.fallback, fallback = _c === void 0 ? null : _c, children = _a.children;
-    if (condition)
+    if (condition) {
+        if (typeof children === 'function')
+            return children(condition);
         return children;
+    }
+    if (typeof fallback === 'function')
+        return fallback(condition);
     return fallback;
 }
 
@@ -70,6 +75,8 @@ var Case = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Case.prototype.render = function () {
+        if (typeof this.props.children === 'function')
+            return this.props.children(this.props.value);
         return this.props.children;
     };
     return Case;
@@ -81,6 +88,8 @@ var Default = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Default.prototype.render = function () {
+        if (typeof this.props.children === 'function')
+            return this.props.children();
         return this.props.children;
     };
     return Default;
@@ -120,7 +129,9 @@ function Switch(props) {
         return children[caseElementIndex];
     if (defaultElement)
         return defaultElement;
-    console.warn("Switch: no Case found and Default not provided");
+    if (props.debug) {
+        console.warn("Switch: no Case found and Default not provided", props, childs);
+    }
     return null;
 }
 

@@ -1,4 +1,6 @@
 /// <reference types="react" />
+declare type JSXElements = JSX.Element | JSX.Element[];
 export interface IDefaultProps {
-    children: JSX.Element;
+    children: JSXElements | (() => JSXElements);
 }
+export {};

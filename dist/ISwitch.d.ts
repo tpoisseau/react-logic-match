@@ -5,4 +5,5 @@ export declare type SwitchChildren<T> = ReactElement<Case<T>> | ReactElement<Def
 export interface ISwitchProps<T> {
     value: T;
     children: SwitchChildren<T> | SwitchChildren<T>[];
+    debug?: boolean;
 }

@@ -1,4 +1,6 @@
+type JSXElements = JSX.Element | JSX.Element[];
+
 export interface ICaseProps<T> {
   value: T;
-  children: JSX.Element;
+  children: JSXElements | ((value: T) => JSXElements);
 }

@@ -41,6 +41,8 @@ var Case = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Case.prototype.render = function () {
+        if (typeof this.props.children === 'function')
+            return this.props.children(this.props.value);
         return this.props.children;
     };
     return Case;

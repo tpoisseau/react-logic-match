@@ -41,6 +41,8 @@ var Default = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Default.prototype.render = function () {
+        if (typeof this.props.children === 'function')
+            return this.props.children();
         return this.props.children;
     };
     return Default;

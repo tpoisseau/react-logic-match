@@ -1,5 +1,5 @@
 import React from "react";
 import { ICaseProps } from "./ICase";
 export default class Case<T> extends React.Component<ICaseProps<T>> {
-    render(): JSX.Element | (JSX.Element & string) | (JSX.Element & number) | (JSX.Element & false) | (JSX.Element & true) | (JSX.Element & React.ReactElement<any, string | ((props: any) => React.ReactElement<any, string | any | (new (props: any) => React.Component<any, any, any>)> | null) | (new (props: any) => React.Component<any, any, any>)>) | (JSX.Element & React.ReactNodeArray) | (JSX.Element & React.ReactPortal);
+    render(): JSX.Element | JSX.Element[] | (((value: T) => JSX.Element | JSX.Element[]) & string) | (((value: T) => JSX.Element | JSX.Element[]) & number) | (((value: T) => JSX.Element | JSX.Element[]) & false) | (((value: T) => JSX.Element | JSX.Element[]) & true) | (((value: T) => JSX.Element | JSX.Element[]) & React.ReactNodeArray);
 }
