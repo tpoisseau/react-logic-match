@@ -1,3 +1,9 @@
+# Archived
+
+It was an experiment, Due to how we write JSX this lib was not ideal and force to either pass a render function as children, or recheck value to not access properties into undefined variable.
+
+I recommend to use ts-pattern instead
+
 # react-logic-match
 
 > Wrappers components for logical displaying
